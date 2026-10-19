@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agência Criativa Web — Experiências digitais imersivas</title>
+  <meta name="description" content="Agência Criativa Web: sites imersivos em 3D, design e desenvolvimento front-end.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+
+  <!-- Cena 3D fixa ao fundo -->
+  <canvas class="scene" aria-hidden="true"></canvas>
+  <div class="page__glow" aria-hidden="true"></div>
+
+  <!-- Cabeçalho -->
+  <header class="header">
+    <a class="header__logo" href="#inicio" aria-label="Agência Criativa Web">
+      <span class="header__logo-mark"></span>
+      <span class="header__logo-text">criativa<strong>web</strong></span>
+    </a>
+
+    <nav class="nav" aria-label="Principal">
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Abrir menu">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="#servicos">Serviços</a></li>
+        <li class="nav__item"><a class="nav__link" href="#processo">Processo</a></li>
+        <li class="nav__item"><a class="nav__link" href="#portfolio">Portfólio</a></li>
+        <li class="nav__item"><a class="nav__link nav__link--cta" href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <button class="theme-toggle" type="button" aria-label="Alternar tema claro/escuro">
+      <span class="theme-toggle__track">
+        <span class="theme-toggle__thumb"></span>
+      </span>
+      <span class="theme-toggle__label">Tema</span>
+    </button>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero -->
+    <section class="hero section" id="inicio">
+      <div class="hero__content reveal">
+        <p class="hero__eyebrow">Agência Criativa Web · 2026</p>
+        <h1 class="hero__title">
+          Sites que você<br>
+          <span class="hero__title-accent">pode atravessar.</span>
+        </h1>
+        <p class="hero__text">
+          Design, 3D e código limpo para marcas que querem ser lembradas.
+          Mova o mouse, role a página e entre na experiência.
+        </p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#contato">Começar projeto</a>
+          <a class="button button--ghost" href="#portfolio">Ver trabalhos</a>
+        </div>
+      </div>
+      <p class="hero__hint">role para explorar <span class="hero__hint-line"></span></p>
+    </section>
+
+    <!-- Serviços -->
+    <section class="section" id="servicos">
+      <header class="section__header reveal">
+        <p class="section__tag">01 — Serviços</p>
+        <h2 class="section__title">O que construímos</h2>
+      </header>
+
+      <div class="cards">
+        <article class="card reveal" data-tilt>
+          <span class="card__icon">◆</span>
+          <h3 class="card__title">Sites imersivos 3D</h3>
+          <p class="card__text">Cenas WebGL, parallax e interações que transformam visitantes em fãs.</p>
+          <span class="card__badge">Three.js</span>
+        </article>
+
+        <article class="card card--featured reveal" data-tilt>
+          <span class="card__icon">●</span>
+          <h3 class="card__title">Design de interface</h3>
+          <p class="card__text">Sistemas visuais consistentes, acessíveis e prontos para escalar com o produto.</p>
+          <span class="card__badge">UI / UX</span>
+        </article>
+
+        <article class="card reveal" data-tilt>
+          <span class="card__icon">▲</span>
+          <h3 class="card__title">Front-end sustentável</h3>
+          <p class="card__text">HTML semântico, CSS em BEM e JavaScript modular, fácil de manter por qualquer time.</p>
+          <span class="card__badge">BEM</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Processo -->
+    <section class="section" id="processo">
+      <header class="section__header reveal">
+        <p class="section__tag">02 — Processo</p>
+        <h2 class="section__title">Do briefing ao deploy</h2>
+      </header>
+
+      <ol class="process">
+        <li class="process__step reveal">
+          <span class="process__number">01</span>
+          <h3 class="process__title">Descoberta</h3>
+          <p class="process__text">Entendemos marca, público e objetivos.</p>
+        </li>
+        <li class="process__step reveal">
+          <span class="process__number">02</span>
+          <h3 class="process__title">Protótipo</h3>
+          <p class="process__text">Layout, movimento e cena 3D validados cedo.</p>
+        </li>
+        <li class="process__step reveal">
+          <span class="process__number">03</span>
+          <h3 class="process__title">Código</h3>
+          <p class="process__text">Front-end responsivo, modular e performático.</p>
+        </li>
+        <li class="process__step reveal">
+          <span class="process__number">04</span>
+          <h3 class="process__title">Lançamento</h3>
+          <p class="process__text">Testes em telas reais, deploy e acompanhamento.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Portfólio -->
+    <section class="section" id="portfolio">
+      <header class="section__header reveal">
+        <p class="section__tag">03 — Portfólio</p>
+        <h2 class="section__title">Trabalhos recentes</h2>
+      </header>
+
+      <div class="work">
+        <a class="work__item reveal" href="#contato" data-tilt>
+          <span class="work__thumb work__thumb--one"></span>
+          <span class="work__name">Loja Atelier 3D</span>
+          <span class="work__type">E-commerce · WebGL</span>
+        </a>
+        <a class="work__item reveal" href="#contato" data-tilt>
+          <span class="work__thumb work__thumb--two"></span>
+          <span class="work__name">Studio Pulso</span>
+          <span class="work__type">Institucional · Motion</span>
+        </a>
+        <a class="work__item reveal" href="#contato" data-tilt>
+          <span class="work__thumb work__thumb--three"></span>
+          <span class="work__name">Nova Órbita</span>
+          <span class="work__type">Landing page · 3D</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="section contact" id="contato">
+      <div class="contact__box reveal">
+        <p class="section__tag">04 — Contato</p>
+        <h2 class="contact__title">Vamos criar algo que ninguém esqueça?</h2>
+        <form class="form" action="#" novalidate>
+          <label class="form__field">
+            <span class="form__label">Nome</span>
+            <input class="form__input" type="text" name="nome" placeholder="Seu nome" required>
+          </label>
+          <label class="form__field">
+            <span class="form__label">E-mail</span>
+            <input class="form__input" type="email" name="email" placeholder="voce@email.com" required>
+          </label>
+          <label class="form__field form__field--full">
+            <span class="form__label">Projeto</span>
+            <textarea class="form__input form__input--area" name="mensagem" rows="3" placeholder="Conte sua ideia"></textarea>
+          </label>
+          <button class="button button--primary form__submit" type="submit">Enviar mensagem</button>
+          <p class="form__status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">© 2026 Douglas Henrique · Agência Criativa Web</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
